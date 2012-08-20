@@ -36,3 +36,17 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "thin", ">= 1.4.1"
+
+group :development, :test do
+  gem "rspec-rails", ">= 2.11.0"
+  gem "factory_girl_rails", ">= 4.0.0"
+end
+
+group :test do
+  gem "capybara", ">= 1.1.2"
+  gem "cucumber-rails", ">= 1.3.0", :require => false
+  gem "database_cleaner", ">= 0.8.0"
+  gem "launchy", ">= 2.1.2"
+end
