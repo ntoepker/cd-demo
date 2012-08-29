@@ -1,0 +1,13 @@
+<% if @album.errors.any? -%>
+  <ul>
+    <% @album.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end -%>
+
+<%= semantic_form_for @album do |f| %>
+  <%= f.inputs :artist, :title %>
+  <%= f.actions %>
+  <p><%= link_to "Cancel", albums_path %></p>
+<% end -%>

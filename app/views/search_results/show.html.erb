@@ -1,0 +1,15 @@
+<h1>Search</h1>
+
+<%= render :partial => "search_results/form" %>
+
+<% if @search_results.any? -%>
+  <ul>
+    <% @search_results.each do |search_result| -%>
+      <il><%= render :partial => '/albums/album', :locals => { :album => search_result } %></il>
+    <% end -%>
+  </ul>
+<% elsif params[:q].present? -%>
+  <p>not found</p>
+<% end -%>
+
+<p><%= link_to "Home", root_path %></p>

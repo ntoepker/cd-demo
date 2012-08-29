@@ -1,0 +1,12 @@
+<h1>All Albums</h1>
+
+<ul>
+  <% @albums.each do |album| -%>
+    <il><%= render :partial => '/albums/album', :locals => { :album => album } %></il>
+  <% end -%>
+</ul>
+
+<ul>
+  <li><%= link_to "New album", new_album_path %></li>
+  <li><%= link_to "Home", root_path %></li>
+</ul>

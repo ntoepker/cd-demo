@@ -1,4 +1,12 @@
 CdDemo::Application.routes.draw do
+  resources :albums
+  resource :search_results, :only => :show
+
+  namespace :services do
+    resources :albums
+    resource :search_results, :only => :show
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +56,7 @@ CdDemo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'app#show'
 
   # See how all your routes lay out with "rake routes"
 

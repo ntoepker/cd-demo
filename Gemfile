@@ -38,6 +38,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "thin", ">= 1.4.1"
+gem "formtastic", ">= 2.2.1"
 
 group :development, :test do
   gem "rspec-rails", ">= 2.11.0"
@@ -49,4 +50,5 @@ group :test do
   gem "cucumber-rails", ">= 1.3.0", :require => false
   gem "database_cleaner", ">= 0.8.0"
   gem "launchy", ">= 2.1.2"
+  gem "dupe", ">= 1.1.0.rc1"
 end

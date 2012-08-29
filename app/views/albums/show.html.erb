@@ -1,0 +1,10 @@
+<h1><%= @album.title %></h1>
+
+<p>Artist: <%= @album.artist %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_album_path(@album) %></li>
+  <li><%= button_to "Delete", album_path(@album), :method => :delete %></li>
+  <li><%= link_to "All albums", albums_path %></li>
+  <li><%= link_to "Home", root_path %></li>
+</ul>
